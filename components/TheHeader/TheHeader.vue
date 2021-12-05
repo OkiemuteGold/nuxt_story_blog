@@ -23,8 +23,9 @@ export default {};
     top: 0;
     left: 0;
     width: 100%;
-    height: 4.5rem;
+    height: 4rem;
     background: #022d30;
+    z-index: 1;
 }
 
 .main_nav {
@@ -34,7 +35,7 @@ export default {};
 .nav_links {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
     list-style: none;
 }
@@ -44,12 +45,22 @@ export default {};
     justify-content: center;
     align-items: center;
     margin: 0 1rem;
-    padding: 0.25rem;
+    padding: 0.3rem;
 }
 
 .nav_link a {
     display: block;
     text-decoration: none;
     color: #fff;
+}
+
+.nav_link a:hover,
+.nav_link a:active,
+.nav_link.nuxt-link-exact-active a {
+    color: #06c4d1;
+}
+
+.nav_link.nuxt-link-exact-active {
+    border-bottom: 3px solid #06c4d1;
 }
 </style>
