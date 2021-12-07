@@ -4,8 +4,12 @@
             <div class="post_preview_thumbnail_container">
                 <div
                     class="post_preview_thumbnail"
-                    :style="{ backgroundImage: `url(${thumbnailImage})` }"
+                    :style="{ backgroundImage: `url(${thumbnailUrl})` }"
                 ></div>
+
+                <div class="date_created">
+                    <time :datetime="dateCreated">{{ dateCreated }}</time>
+                </div>
             </div>
 
             <div class="post_preview_content">
@@ -23,7 +27,11 @@ export default {
             type: String,
             required: true,
         },
-        thumbnailImage: {
+        dateCreated: {
+            type: String,
+            required: true,
+        },
+        thumbnailUrl: {
             type: String,
             required: true,
         },
@@ -62,9 +70,22 @@ a {
     overflow: hidden;
 }
 
+.date_created {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 1px 6px 0 8px;
+    border-radius: 4px 0 0 0;
+    font-size: 0.625rem;
+}
+
 .post_preview_thumbnail {
     background-size: cover;
     background-position: center;
+    filter: contrast(98%);
     width: 100%;
     height: 10rem;
     transition: 0.4s ease-in-out;
