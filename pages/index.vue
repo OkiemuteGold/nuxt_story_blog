@@ -24,7 +24,8 @@ export default {
                 starts_with: "blog/",
             })
             .then((res) => {
-                console.log(res);
+                // console.log(res);
+
                 return {
                     posts: res.data.stories.map((post) => {
                         const date = new Date(post.created_at);
@@ -104,6 +105,7 @@ export default {
 #posts {
     display: flex;
     flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
     justify-content: center;
     padding: 1rem;
 }

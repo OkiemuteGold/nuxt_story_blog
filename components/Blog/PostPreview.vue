@@ -86,13 +86,20 @@ a {
     background-size: cover;
     background-position: center;
     filter: contrast(98%);
+    -webkit-filter: contrast(98%);
     width: 100%;
     height: 10rem;
     transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
 }
 
 .post_preview:hover .post_preview_thumbnail {
     transform: scale(1.075);
+    -o-transform: scale(1.075);
+    -moz-transform: scale(1.075);
+    -webkit-transform: scale(1.075);
 }
 
 .post_preview_content {
